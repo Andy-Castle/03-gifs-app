@@ -44,8 +44,8 @@ export class GifsService {
 
     this._tagsHistory = JSON.parse(localStorage.getItem('history')!);
 
-    const firstTag: string[] = JSON.parse(localStorage.getItem('history')!);
-    this.searchTag(firstTag[0]);
+    if (this._tagsHistory.length === 0) return;
+    this.searchTag(this._tagsHistory[0]);
   }
 
   searchTag(tag: string): void {
