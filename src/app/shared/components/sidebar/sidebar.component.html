@@ -1,12 +1,12 @@
 <div class="bg-dark border-right p-3" id="sidebar">
   <h3 class="text-light text-center">GifsApp</h3>
   <hr class="text-white" />
-  <div *ngIf="listTags !== null" class="list-group list-reset">
+  <div class="list-group list-reset">
     <button
-      *ngFor="let tags of listTags"
+      *ngFor="let tag of tags"
       class="list-group-item list-group-item-action"
     >
-      {{ tags }}
+      {{ tag | titlecase }}
     </button>
   </div>
 </div>
